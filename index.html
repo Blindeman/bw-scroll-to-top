@@ -103,7 +103,7 @@
 			<li>Load jQuery (CDN) to make the script work</li>
 			<li>Script in the footer with the scrolling and show and hide functionality.</li>
 		</ul>
-		<p>NOTES: You can look at the source code or go to <a href="https://github.com/Blindeman/bw-scroll-to-top" target="_blank">Github.com/Blindeman</a>, where I store things I use regularly for safekeeping. CSS scroll-behavior doesn't work in Edge, IE or Safari but the link and :target do work so I think that's acceptable. The scroll-to-top script scrolls the page and shows and hides the button depending on whether you've scrolled down or not. I've been thinking of just using CSS smooth-scroll for the scroll-to-top part too but for now this is what it is. I'm loading jQuery in the footer, but that means you get a flash of the button before it disappears again. Up to you.</p>
+		<p>NOTES: You can look at the source code or go to <a href="https://github.com/Blindeman/bw-scroll-to-top" target="_blank">Github.com/Blindeman</a>, where I store things I use regularly for safekeeping. CSS scroll-behavior doesn't work in Edge, IE or Safari but the anchor link and :target do work so I think that's acceptable. The scroll-to-top script scrolls the page and shows and hides the button depending on whether you've scrolled down or not. I've been thinking of just using CSS smooth-scroll for the scroll-to-top part too but for now this is what it is. I'm loading jQuery in the footer, but that means you get a flash of the button before it disappears again. Up to you.</p>
 		<h2 id="first">First Heading</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -141,7 +141,8 @@
 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</div>
 	<footer id="colophon"></footer>
-	<a href="#" class="scrollup"><span class="screen-reader-text">Naar boven</span></a>
+	<!-- Don't forget to change #site-navigation if your first visible element after the <body>-tag doesn't have the ID #site-navigation -->
+	<a href="#site-navigation" class="scrollup"><span class="screen-reader-text">Naar boven</span></a>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script>
 		//Don't forget to change #site-navigation if your first visible element after the <body>-tag doesn't have the ID #site-navigation
