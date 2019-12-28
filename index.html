@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Scroll to Top</title>
+	<style type="text/css">
+		/* P R E S E N T A T I O N A L */
+		body {
+			font-family: "Tahoma", sans-serif;
+			font-size: 17px;
+			line-height: 1.86;
+			margin: 0;
+			padding: 0;
+		}
+		#site-navigation ul {
+			display: flex;
+			list-style: none;
+			justify-content: space-between;
+			margin: 0;
+			padding: 0;
+		}
+		#site-navigation,
+		#masthead,
+		#page-content {
+			margin: 0 auto 5.5rem;
+			width: 94%;
+		}
+		@media screen and (min-width: 962px) {
+			#site-navigation,
+			#masthead,
+			#page-content {
+				margin: 0;
+				padding: 1rem 20%;
+				padding: 1rem calc( 50vw - ( 960px / 2 ) );
+				width: auto;
+			}
+		}
+
+		/* F U N C T I O N A L */
+		html { scroll-behavior: smooth; }
+		*:target {
+			-webkit-animation: alert 1s linear;
+			animation: alert 1s linear;
+		}
+		@keyframes alert {
+			0% { background-color: #F00; }
+			100% { background-color: #FFF; }
+		}
+		.scrollup {
+			background-color: #000;
+			border: 1px solid #000;
+			border-radius: 3px;
+			bottom: 2rem;
+			height: 2rem;
+			left: 2rem;
+			position: fixed;
+			width: 2rem;
+		}
+		.scrollup::before { /* Adds an arrow pointing up */
+			content: "\2191";
+			color: #FFF;
+			display: inline-block;
+			height: 100%;
+			text-align: center;
+			width: 100%;
+		}
+		.scrollup:hover,
+		.scrollup:focus {
+			background-color: #FFF;
+		}
+		.scrollup:hover::before,
+		.scrollup:focus::before {
+			color: #000;
+		}
+		.screen-reader-text { /* hides text for everyone but screen readers */
+			border: 0;
+			clip: rect(0,0,0,0);
+			height: 1px;
+			overflow: hidden;
+			position: absolute !important;
+			width: 1px;
+		}
+	</style>
+</head>
+<body>
+	<nav id="site-navigation">
+		<ul>
+			<li><a href="#first">First</a></li>
+			<li><a href="#second">Second</a></li>
+			<li><a href="#third">Third</a></li>
+			<li><a href="#fourth">Fourth</a></li>
+			<li><a href="#fifth">Fifth</a></li>
+		</ul>
+	</nav>
+	<header id="masthead">
+		<h1>Scroll to Top</h1>
+	</header>
+	<div id="page-content">
+		<p>A JS/jQuery scroll-to-top script (adjusted from the one used in the WP Astra theme) that doesn't intefere with the functioning of :target and which isn't impaired by using CSS scroll-behavior.<br><strong>Consists of the following parts:</strong></p>
+		<ul>
+			<li>CSS in the header to light up the target and position the scroll-to-top button</li>
+			<li>A little HTML markup for the scroll-to-top button</li>
+			<li>Load jQuery (CDN) to make the script work</li>
+			<li>Script in the footer with the scrolling and show and hide functionality.</li>
+		</ul>
+		<p>NOTES: You can look at the source code or go to <a href="https://github.com/Blindeman/bw-scroll-to-top" target="_blank">Github.com/Blindeman</a>, where I store things I use regularly for safekeeping. CSS scroll-behavior doesn't work in Edge, IE or Safari but the link and :target do work so I think that's acceptable. The scroll-to-top script scrolls the page and shows and hides the button depending on whether you've scrolled down or not. I've been thinking of just using CSS smooth-scroll for the scroll-to-top part too but for now this is what it is. I'm loading jQuery in the footer, but that means you get a flash of the button before it disappears again. Up to you.</p>
+		<h2 id="first">First Heading</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<h3 id="second">Second Heading</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<h4 id="third">Third Heading</h4>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<h5 id="fourth">Fourth Heading</h5>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<h6 id="fifth">Fifth Heading</h6>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<footer id="colophon"></footer>
+	<a href="#" class="scrollup"><span class="screen-reader-text">Naar boven</span></a>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		//Don't forget to change #site-navigation if your first visible element after the <body>-tag doesn't have the ID #site-navigation
+		jQuery, jQuery( document ).ready( function( o ){
+			var r = document.querySelector( "#site-navigation" );
+			jQuery( ".scrollup" ) && jQuery( ".scrollup" ).length && ( ast_scroll_top = function(){
+				var o = jQuery( ".scrollup" );
+				var l = window.pageYOffset || document.body.scrollTop;
+				r&&r.length ? l > r.offsetHeight + 100 ? o.show() : o.hide() : 300 < jQuery(window).scrollTop() ? o.show() : o.hide()
+			},
+			ast_scroll_top(), jQuery( window ).on( "scroll", function(){
+				ast_scroll_top()
+			}),
+			jQuery( ".scrollup" ).on( "click", function( o ){
+				o.preventDefault(),
+				jQuery( "html, body" ).animate({
+					scrollTop : 0
+				}, 200)
+			}))
+		});
+	</script>
+</body>
+</html>
