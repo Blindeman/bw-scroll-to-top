@@ -46,9 +46,13 @@
 			-webkit-animation: alert 1s linear;
 			animation: alert 1s linear;
 		}
+		@-webkit-keyframes alert {
+			from { background-color: #F00; }
+			to { background-color: #FFF; }
+		}
 		@keyframes alert {
-			0% { background-color: #F00; }
-			100% { background-color: #FFF; }
+			from { background-color: #F00; }
+			to { background-color: #FFF; }
 		}
 		.scrollup {
 			background-color: #000;
