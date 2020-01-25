@@ -7,6 +7,9 @@ Demo: https://blindemanwebsites.com/for-use/bw-scroll-to-top/
 
 ## Changelog
 
+### January 25, 2019
+* Translated some stray Dutch to English for clarity and consistency
+
 ### December 28, 2019
 * Added an anchor link to the scrollup <a>-tag to keep some functionality if JS is turned off
 * Added anchor before link in the explanation for clarity
